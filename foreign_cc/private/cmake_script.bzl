@@ -280,6 +280,7 @@ def _fill_crossfile_from_toolchain(workspace_name, tools, flags):
         dict["CMAKE_C_COMPILER"] = _absolutize(workspace_name, tools.cc, True)
     if tools.cxx:
         dict["CMAKE_CXX_COMPILER"] = _absolutize(workspace_name, tools.cxx, True)
+        dict["CMAKE_CUDA_HOST_COMPILER"] = _absolutize(workspace_name, tools.cxx, True)
 
     if tools.cxx_linker_static:
         dict["CMAKE_AR"] = _absolutize(workspace_name, tools.cxx_linker_static, True)
